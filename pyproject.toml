@@ -1,0 +1,21 @@
+[project]
+name = "voice-agent"
+version = "0.1.0"
+description = "A real-time multilingual AI News Anchor built with LiveKit Agents, Gnani speech models, OpenAI, and Tavily search. Supports voice-based news discovery and explanations with latency monitoring."
+readme = "README.md"
+authors = [
+    { name = "RockyBhai", email = "rbisnnoii@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "livekit-agents[gnani,openai]~=1.8",
+    "python-dotenv>=1.2.4",
+    "tavily-python>=0.8.5",
+]
+
+[project.scripts]
+voice-agent = "voice_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"

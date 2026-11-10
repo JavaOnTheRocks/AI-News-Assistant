@@ -1,0 +1,15 @@
+livekit-agents[openai,gnani]~=1.8
+python-dotenv
+fastapi
+uvicorn[standard]
+langgraph
+langsmith
+openai
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pydantic
+pytest
+tavily-python
+jupyterlab
+ipykernel
