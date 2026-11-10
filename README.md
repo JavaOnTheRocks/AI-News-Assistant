@@ -12,10 +12,6 @@ Watch the Voice AI News Assistant demonstration:
 
 **[▶️ Watch the Direct Project Demo Video on You-tube](https://youtu.be/vGPM5Ca2UVU)**
 
-or
-
-![Demo Video](Demo_Video.mp4)
-
 ---
 
 ## 1. Problem Statement
