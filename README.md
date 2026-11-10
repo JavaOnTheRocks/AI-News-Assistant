@@ -1,7 +1,7 @@
 # 🎙️ Voice AI News Assistant
 ### A Real-Time Conversational AI News Experience
 
-**Developed by: Rakesh Bishnoi**  
+**Developed by: Rakesh Bishnoi**
 **Hackathon:** Gnani Great Indian AI Internship Challenge
 
 Voice AI News Assistant is a real-time, voice-based AI news assistant that helps users discover and understand current news through natural conversations. Users can ask questions using their voice, receive AI-generated spoken responses, explore current developments through web search, and continue the conversation with follow-up questions.
@@ -97,7 +97,123 @@ The following diagram illustrates the complete voice-processing workflow:
 
 ![Voice AI News Assistant System Architecture](assets/system-architecture.png)
 
-## 8. Baseline Performance Results
+## 8. Setup and Run Locally
+
+Follow these steps to run the Voice AI News Assistant on your local machine.
+
+### 1. Prerequisites
+
+- Python installed
+- Git installed
+- Microphone and speakers
+- API credentials for OpenAI, Gnani AI, Tavily, and LiveKit
+- Internet connection
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/JavaOnTheRocks/AI-News-Assistant.git
+cd AI-News-Assistant
+```
+
+### 3. Create and Activate a Virtual Environment
+
+**Windows (CMD):**
+
+```cmd
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**macOS / Linux:**
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 5. Configure Environment Variables
+
+Create a `.env` file in the project's root directory.
+
+You can create it on Windows using:
+
+```cmd
+copy .env.example .env
+```
+
+If `.env.example` is not included, create a new file named `.env` manually.
+
+Add your API credentials and configuration:
+
+```env
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key
+OPENAI_MODEL=gpt-4.1-mini
+
+# Gnani AI Configuration
+GNANI_API_KEY=your_gnani_api_key
+GNANI_STT_LANGUAGE=en-IN
+GNANI_TTS_MODEL=timbre-v2.5
+GNANI_TTS_VOICE=Pranav
+GNANI_SAMPLE_RATE=16000
+
+# Tavily Search Configuration
+TAVILY_API_KEY=your_tavily_api_key
+
+# LiveKit Configuration
+LIVEKIT_URL=your_livekit_server_url
+LIVEKIT_API_KEY=your_livekit_api_key
+LIVEKIT_API_SECRET=your_livekit_api_secret
+
+# Agent Configuration
+AGENT_NAME=VoiceAgent AI
+```
+
+**Important:** Use the exact environment variable names expected by your application's configuration code. In particular, verify the three LiveKit variable names against your LiveKit configuration before running. Never commit your actual `.env` file or API keys to GitHub.
+
+### 6. Run the Voice AI News Assistant
+
+From the project root, with your virtual environment activated:
+Before running this LiveKit CLI command make sure that
+
+Open PowerShell:
+
+```cmd
+winget install LiveKit.LiveKitCLI
+```
+and then verify:
+
+```cmd
+lk --version
+```
+
+```cmd
+lk agent console src\voice_agent\main.py
+```
+
+The agent should initialize and connect to the required services.
+
+### 7. Start a Voice Conversation
+
+Once the application is running:
+
+1. Connect using the configured LiveKit session.
+2. Allow microphone access.
+3. Ask a question about current news.
+4. The agent processes your speech, searches for relevant news when needed, and responds using generated speech.
+
+Press `Ctrl + C` to stop the application.
+
+
+## 9. Baseline Performance Results
 
 The following measurements were collected during an approximately four-minute test session on **November 10, 2026**.
 
@@ -105,7 +221,7 @@ The following measurements were collected during an approximately four-minute te
 
 **Important:** These measurements represent an initial baseline, not a controlled benchmark. Most metrics have five samples, while end-to-end latency has four complete measurements. Different latency metrics have different measurement definitions and should not be added together.
 
-## 9. Functional Testing Summary
+## 10. Functional Testing Summary
 
 The application was tested through an end-to-end voice session.
 
@@ -121,7 +237,7 @@ The application was tested through an end-to-end voice session.
 | Session Reliability | STT, TTS, and WebSocket issues occurred. |
 
 
-## 10. Future Improvements
+## 11. Future Improvements
 
 The next development priorities include:
 
@@ -159,7 +275,7 @@ The next development priorities include:
 ---
 
 
-## 🔗 14. Project & Social Media
+## 14. Project & Social Media
 
 - **GitHub Repository:** [Voice AI News Assistant](https://github.com/JavaOnTheRocks/AI-News-Assistant)
 - **LinkedIn Project Post:** [View LinkedIn Post]()
