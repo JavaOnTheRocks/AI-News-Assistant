@@ -8,9 +8,8 @@ Voice AI News Assistant is a real-time, voice-based AI news assistant that helps
 
 ## Project Demo Video
 
-Watch the Voice AI News Assistant demonstration:
-
-**[▶️ Watch the Direct Project Demo Video on You-tube](https://youtu.be/vGPM5Ca2UVU)**
+Watch the Voice AI News Assistant in Action:
+**[▶ Watch Voice AI News Assistant Demo](assets/Demo_Video.mp4)**
 
 ---
 
